@@ -2,6 +2,14 @@
  
 /* universal */
 
+.gravatar{
+	padding-left: 75px;
+}
+
+.changePhoto{
+	padding-left: 123px;
+}
+
 html {
   overflow-y: scroll;
 }
