@@ -2,10 +2,13 @@
 	<tr>
 		<td>
 			<h1>
-				<%= gravatar_for @user, :size => 100 	%>
-				<%= @user.name %>
+  				<%= gravatar_image_tag(@user.email.downcase, :alt => @user.name,
+                                            :class => 'gravatar',
+                                            :gravatar => {:size => 50}) %>
+			   <%= @user.name %>
 			</h1>
 		</td>
+		
 		<td class ="sidebar round" >
 			<strong>
 				Name 
@@ -15,7 +18,7 @@
 			<strong>
 				URL
 			</strong>
-			<%= link_to user_path(@user), @user"%>
+			<%= link_to user_path(@user), "/users/#{@user.id}"%>
 		</td>
 	</tr>
 </table> 
